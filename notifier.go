@@ -1,4 +1,13 @@
-package notifierz
+package notiz
+
+
+
+var (
+	defaultNotifier  Notifier
+	criticalNotifier Notifier
+	closeChan        chan bool = make(chan bool)
+)
+
 
 type ReportLog struct {
 	ReportType string                 `json:"report_type,omitempty"`
